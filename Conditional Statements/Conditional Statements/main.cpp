@@ -125,7 +125,7 @@ int main(int argc, const char * argv[]) {
     }
     else if ( a == 9)
     {
-        cout << "night" << endl;
+        cout << "nine" << endl;
     }
     else
     {
