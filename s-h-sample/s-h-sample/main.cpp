@@ -38,7 +38,8 @@ void StairCase(int n)
                 //cout << "#";
                 printf("#");
             }
-            cout << endl;
+            //cout << endl;
+            printf("\n");
             n--;
             w++;
         }
@@ -69,6 +70,22 @@ int main()
 //    cout << sum << endl;
 //
 //    return 0;
+
+/*
+ // Actual solution 
+ long sumOfIntegers(int arr_size, int* arr) {
+ 
+ int sum=0;
+ 
+ for (int a=0; a<arr_size; a++)
+ {
+ sum+=arr[a];
+ }
+ return sum;
+ 
+ }
+
+ */
 
 // Question 2 - Staircase (can't use cout)
 
@@ -124,8 +141,18 @@ int main()
 // http://bigocheatsheet.com/
 /*
  
- 
  which sorting algorithms best asymptotic runtime complexity
  
  bubble heap selection insertion
+ */
+
+// Solution
+/*
+ 
+
+ accepted
+ 
+ In bubble sort in ith iteration you have n-i-1 inner iterations (n^2)/2 total, but in insertion sort you have maximum i iterations on i'th step, but i/2 on average, as you can stop inner loop earlier, after you found correct position for the current element. So you have (sum from 0 to n) / 2 which is (n^2) / 4 total;
+ 
+ That's why insertion sort is faster than bubble sort.
  */
