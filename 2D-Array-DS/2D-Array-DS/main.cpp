@@ -39,5 +39,42 @@ int main(){
             cin >> arr[arr_i][arr_j];
         }
     }
+    
+    // Initialize 2D dynamic array
+    // http://stackoverflow.com/questions/936687/how-do-i-declare-a-2d-array-in-c-using-new
+    int rowCount = 6, colCount = 6;
+                                                        //  int *m = new int[H][W];
+    int ** m = new int* [rowCount];
+    for (int i = 0; i < rowCount; ++i)
+    {
+        m[i] = new int[colCount];
+    }
+    
+    
+  
+    int sum = 0;
+ //   int imax = numeric_limits<int>::max();
+    
+    for(int h=0;h<rowCount-2;h++)
+    {
+        for(int w=0;w<colCount-2;w++)
+        {
+             sum =
+                       m[h][w]+
+                       m[h][w+1]+
+                       m[h][w+2]+
+                       m[h+1][w+1]+
+                       m[h+2][w]+
+                       m[h+2][w+1]+
+                       m[h+2][w+2]
+                       
+                       ;
+            
+        }
+    }
+    cout << sum << endl;
+
     return 0;
 }
+
+
